@@ -17,6 +17,4 @@ EOF
 
 echo "JSON: $(generate_post_data)"
 
-echo "$GIT_MESSAGE"
-
 success "\nBuild triggered successfully."
