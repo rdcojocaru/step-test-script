@@ -2,10 +2,10 @@ name: trigger-test
 version: 0.1.9
 description: Trigger a test
 keywords:
-	- build
-	- trigger
-	- dependency
+    - build
+    - trigger
+    - dependency
 properties:
   	message:
-    	type: string
-		required: true
+        type: string
+        required: true
