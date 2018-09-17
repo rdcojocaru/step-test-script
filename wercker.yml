@@ -1,8 +1,6 @@
 box: alpine
 build:
     steps:
-        - shellcheck:
-            files: run.sh
         - script:
             name: prepare output
             code: echo "Test Wercker"
