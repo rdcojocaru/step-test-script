@@ -1,0 +1,11 @@
+name: trigger-test
+version: 0.1.9
+description: Trigger a test
+keywords:
+	- build
+	- trigger
+	- dependency
+properties:
+  	message:
+    	type: string
+		required: true
