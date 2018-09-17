@@ -1,6 +1,6 @@
-name: trigger-test
-version: 0.1.9
-description: Trigger a test
+name: trigger-build
+version: 0.1
+description: Trigger a build test
 keywords:
     - build
     - trigger
