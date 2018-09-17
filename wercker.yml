@@ -1,5 +1,4 @@
-box: wercker/default
-
+box: alpine
 build:
     steps:
         - shellcheck:
