@@ -1,8 +1,10 @@
 box: alpine
 build:
     steps:
-        - rdcojocaru/trigger-test@1.0.0:
-            message: 'TEST MESSAGE!'
+        - rdcojocaru/create_job@1.0.0:
+            json_file: job.json
+            dcos_url: http://localhost
+            time_limit: 100
         - script:
             name: prepare output
             code: rm -rf $WERCKER_ROOT/.git
