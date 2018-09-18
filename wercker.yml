@@ -4,10 +4,25 @@ build:
         - script:
             name: install dependencies
             code: pip install requests
+        - add-ssh-key:
+            keyname: DCOS_KEY
+        - internal/shell
+        - add-to-known_hosts@2.0.1:
+            hostname: $DCOS_HOST
+            port: $DCOS_PORT
+            fingerprint: $DCOS_FINGERPRINT
+            type: $DCOS_FINGERPRINT_TYPE
+        - petrica/ssh-tunnel:
+            source-port: 8080
+            destination-port: 8080
+            destination-host: 127.0.0.1
+            connection-string: ${DCOS_USER}@${DCOS_HOST}
+            connection-port: 2200
+            keepalive: 60
         - rdcojocaru/create-job@1.0.0:
             script_file: script.py
             json_file: job.json
-            dcos_url: http://localhost
+            dcos_url: ${DCOS_HOST}
             time_limit: 100
         - script:
             name: prepare output
