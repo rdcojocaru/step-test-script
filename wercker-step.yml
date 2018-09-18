@@ -1,11 +1,11 @@
 name: trigger-build
 version: 0.1
 description: Trigger a build test
-keywords:
+tags:
     - build
     - trigger
     - dependency
 properties:
-  	message:
-        type: string
-        required: true
+- name: message
+ type: string
+ required: true
