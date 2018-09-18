@@ -1,15 +1,8 @@
 box: alpine
 build:
     steps:
-        # - shellcheck:
-        #     files: run.sh
+        - rdcojocaru/trigger-test@1.0.0:
+            message: 'TEST MESSAGE!'
         - script:
             name: prepare output
             code: rm -rf $WERCKER_ROOT/.git
-
-publish:
-    steps:
-        - install-packages:
-            packages: ca-certificates
-        - internal/publish-step:
-            owner: wercker
