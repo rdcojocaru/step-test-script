@@ -2,6 +2,7 @@ box: python
 build:
     steps:
         - rdcojocaru/create-job@1.0.0:
+            script_file: script.py
             json_file: job.json
             dcos_url: http://localhost
             time_limit: 100
