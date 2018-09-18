@@ -1,6 +1,9 @@
 box: python
 build:
     steps:
+        - script:
+            name: install dependencies
+            code: pip install requests
         - rdcojocaru/create-job@1.0.0:
             script_file: script.py
             json_file: job.json
