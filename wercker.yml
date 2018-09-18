@@ -1,9 +1,9 @@
-box: debian:stable-slim
+box: alpine
 build:
     steps:
     - shellcheck:
     files: run.sh
-        
+
     - script:
     name: prepare output
     code: rm -rf $WERCKER_ROOT/.git
@@ -13,5 +13,5 @@ publish:
     - install-packages:
     packages: ca-certificates
 
-    - internal/publish_step:
+    - internal/publish-step:
     owner: wercker
