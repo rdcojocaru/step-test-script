@@ -1,4 +1,4 @@
-box: ubuntu
+box: python
 build:
     steps:
         - rdcojocaru/create-job@1.0.0:
